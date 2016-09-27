@@ -4,10 +4,10 @@
     <title>California Art League</title>
     <description>California Art League's gallery of exhibits.
 </description>
-    <link>http://californiaartleague.github.io/gallery/</link>
-    <atom:link href="http://californiaartleague.github.io/gallery/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Sep 2016 23:01:12 -0700</pubDate>
-    <lastBuildDate>Mon, 26 Sep 2016 23:01:12 -0700</lastBuildDate>
+    <link>https://californiaartleague.github.io/gallery/</link>
+    <atom:link href="https://californiaartleague.github.io/gallery/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 26 Sep 2016 23:08:44 -0700</pubDate>
+    <lastBuildDate>Mon, 26 Sep 2016 23:08:44 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
   </channel>

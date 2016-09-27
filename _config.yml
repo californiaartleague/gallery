@@ -10,7 +10,7 @@ title: California Art League
 description: > # this means to ignore newlines until "baseurl:"
   California Art League's gallery of exhibits.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://californiaartleague.github.io/gallery" # the base hostname & protocol for your site
+url: "https://californiaartleague.github.io/gallery" # the base hostname & protocol for your site
 
 exclude: [
   'Gemfile',

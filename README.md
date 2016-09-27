@@ -1,7 +1,7 @@
 # Gallery
 This is a [Jekyll](https://jekyllrb.com/) website built to showcase the fine art done by the members of the California Art League.
 
-You can view it on GitHub Pages at: [http://californiaartleague.github.io/gallery](http://californiaartleague.github.io/gallery)
+You can view it on GitHub Pages at: [https://californiaartleague.github.io/gallery](https://californiaartleague.github.io/gallery)
 
 ## Requirements
 
