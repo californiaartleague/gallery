@@ -25,6 +25,10 @@ redirect_from:
         {% if piece.AWARD != "" %}
           <p class="text-center"><small class="text-muted text-left"><i class="fa fa-trophy" aria-hidden="true"></i>&nbsp;&nbsp;{{ piece.AWARD }}</small></p>
         {% endif %}
+        {% if piece.video > "" %}
+          <iframe class="hidden-sm hidden-xs" width="275" height="155" src="{{ piece.video }}" frameborder="0" allowfullscreen></iframe>
+          <a href="{{ piece.video }}" target="_blank" class="hidden-md hidden-lg">See video</a>
+        {% endif %}
       </div>
     </li>
   {% endfor %}
