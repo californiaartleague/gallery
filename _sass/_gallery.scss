@@ -1,16 +1,3 @@
-*, *:after, *:before { box-sizing: border-box; }
-
-.wf-loading * { 
-  opacity: 0;
-}
-.wf-active *, 
-.wf-inactive * {
-  -webkit-transition: opacity 1s ease-out;  
-  -moz-transition: opacity 1s ease-out; 
-  -o-transition: opacity 1s ease-out;  
-  transition: opacity 1s ease-out;  
-}
-
 body {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f2f2f2;
