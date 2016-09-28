@@ -12,8 +12,12 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f2f2f2;
+}
+
+a {
+  color: ​#034C64;
 }
 
 header {
@@ -25,10 +29,11 @@ header nav a {
   color: black;
   color: rgba(0,0,0,.75);
   text-decoration: none;
+  padding: 10px;
 }
 
 header nav a:hover {
-  color: #337ab7;
+  color: ​#034C64;
   text-decoration: underline;
 }
 
@@ -36,9 +41,14 @@ a:hover.no-underline  {
   text-decoration: none !important;
 }
 
-header nav h1 {
-  font-family: 'Kristi', "Helvetica Neue", Helvetica, Arial, sans-serif;;
-  font-size: 5em;
+#logo {
+  display: block;
+}
+
+@media only screen and (min-width: 1000px) {
+  #logo {
+    display: inline-block;
+  }
 }
 
 .flex-header {
@@ -47,6 +57,7 @@ header nav h1 {
   justify-content: space-around;
   align-items: center;
   align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .slide {
