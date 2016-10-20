@@ -18,31 +18,48 @@
     <h1>Test</h1>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
-      $(window).load(function() {
-        $.ajax({
-          url: "https://oauth.wildapricot.org/auth/token",
-          type: "POST",
-          xhrFields: { withCredentials: true },
-          beforeSend: function (xhr) { 
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-            xhr.setRequestHeader("Authorization", "Basic " + btoa("APIKEY:20kl00o9vn1c6xtbs2rhgmbo6rc3bg"));             
-          },
-          data: {
-            grant_type: "client_credentials",
-            scope: "events_view contacts_view"
-          },
-          success: function(data, status, xhr) {
-            console.log("data: " + data);
-          },
-          error: function(xhr, status, error) {
-            console.log("status: " + status);
-          },
-          complete: function() {
-            console.log("complete");
-          }
-        });
+      // $(window).load(function() {
+      //   $.ajax({
+      //     url: "https://oauth.wildapricot.org/auth/token",
+      //     type: "POST",
+      //     data: {
+      //       grant_type: "client_credentials",
+      //       scope: "events_view contacts_view"
+      //     },
+      //     xhrFields: { withCredentials: true },
+      //     beforeSend: function (xhr) { 
+      //       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+      //       xhr.setRequestHeader("Authorization", "Basic " + btoa("APIKEY:20kl00o9vn1c6xtbs2rhgmbo6rc3bg"));             
+      //     },
+      //     success: function(data, status, xhr) {
+      //       console.log("data: " + data);
+      //     },
+      //     error: function(xhr, status, error) {
+      //       console.log("status: " + status);
+      //     },
+      //     complete: function() {
+      //       console.log("complete");
+      //     }
+      //   });
+      // });
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://oauth.wildapricot.org/auth/token",
+        "method": "POST",
+        "headers": {
+          "content-type": "application/x-www-form-urlencoded",
+          "authorization": "Basic QVBJS0VZOjIwa2wwMG85dm4xYzZ4dGJzMnJoZ21ibzZyYzNiZw==",
+          "cache-control": "no-cache"
+        },
+        "data": {
+          "grant_type": "client_credentials",
+          "scope": "events_view contacts_view"
+        }
+      }
 
-
+      $.ajax(settings).done(function (response) {
+        console.log(response);
       });
     </script>
   </body>
