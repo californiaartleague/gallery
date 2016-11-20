@@ -1,0 +1,35 @@
+---
+layout: cal-slideshow
+title: California Art League | 2016 Red
+redirect_from:
+  - /
+  - /exhibits/
+---
+<div class="text-center">
+  <h1>2016 <small><em>Red</em></small>
+  </h1>
+</div>
+<ul class="gallery grid effect-2" id="grid">
+  {% for piece in site.data.red16 %}
+    <li>
+      <div>
+        <img class="slide" src="{{ site.url }}{{ site.baseurl }}/images/2016-red/small/{{ piece.photo }}" alt="{{ piece.Title }}, {{ piece.FirstName }} {{ piece.LastName }}, {{ piece.Size }} {{ piece.Medium }} {{ piece.price }}" data-height="{{ piece.imgHeight }}" data-width="{{ piece.imgWidth }}">
+        <h5 class="text-center">
+          <em>{{ piece.Title }}</em><br>
+          <small>
+            {{ piece.FirstName }} {{ piece.LastName }}<br>
+            {{ piece.Size }} {{ piece.Medium }}<br>
+            {{ piece.price }}
+          </small>
+        </h5>
+        {% if piece.AWARD != "" %}
+          <p class="text-center"><small class="text-muted text-left"><i class="fa fa-trophy" aria-hidden="true"></i>&nbsp;&nbsp;{{ piece.AWARD }}</small></p>
+        {% endif %}
+        {% if piece.video > "" %}
+          <iframe class="hidden-sm hidden-xs" width="275" height="155" src="{{ piece.video }}" frameborder="0" allowfullscreen></iframe>
+          <a href="{{ piece.video }}" target="_blank" class="hidden-md hidden-lg">See video</a>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
