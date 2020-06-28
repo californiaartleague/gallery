@@ -1,0 +1,43 @@
+---
+layout: cal-slideshow
+title: California Art League | 2020 Change
+redirect_from:
+  - /
+  - /exhibits/
+---
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-sm-offset-3">
+    <a href="http://californiaartleague.org/" id="logo" class="pull-left m-t-3 m-r-3 hidden-xs"><img src="{{ site.url }}{{ site.baseurl }}/images/CAL-logo.svg" width="134" height="150" alt="California Art League"></a>
+    <a href="http://californiaartleague.org/" id="logo" class="m-t-3 text-center hidden-sm hidden-md hidden-lg"><img src="{{ site.url }}{{ site.baseurl }}/images/CAL-logo.svg" width="134" height="150" alt="California Art League"></a>
+    <h1 class="m-t-3"><em>Change</em></h1>
+    <p>
+      Juried by: <a href="http://www.prestongraphicarts.com/" target="_blank">Preston Craig</a><br>
+      2020 Online Show<br>
+    </p>
+  </div>
+</div>
+
+<ul class="gallery grid effect-2" id="grid">
+  {% for piece in site.data.change2020 %}
+    <li>
+      <div>
+        <img class="slide" src="{{ site.url }}{{ site.baseurl }}/images/2020-change/small/{{ piece.photo }}" alt="{{ piece.Title }}, {{ piece.FirstName }} {{ piece.LastName }}, {{ piece.Size }} {{ piece.Medium }} {{ piece.price }}" data-height="{{ piece.imgHeight }}" data-width="{{ piece.imgWidth }}">
+        <h5 class="text-center">
+          <em>{{ piece.Title }}</em><br>
+          <small>
+            <a href="{{ piece.Website }}" target="_blank">{{ piece.FirstName }} {{ piece.LastName }}</a>
+            {{ piece.Size }} {{ piece.Medium }}<br>
+            {{ piece.price }}
+          </small>
+        </h5>
+        {% if piece.AWARD.size > 0 %}
+          <p class="text-center"><small class="text-muted text-left"><i class="fa fa-trophy" aria-hidden="true"></i>&nbsp;&nbsp;{{ piece.AWARD }}</small></p>
+        {% endif %}
+        {% if piece.video > "" %}
+          <iframe class="hidden-sm hidden-xs" width="275" height="155" src="{{ piece.video }}" frameborder="0" allowfullscreen></iframe>
+          <a href="{{ piece.video }}" target="_blank" class="hidden-md hidden-lg">See video</a>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
